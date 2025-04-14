@@ -66,8 +66,8 @@
 	}
 
 	:global(.leaflet-popup-content-wrapper, .leaflet-popup-tip) {
-		background-color: white; /* Example */
-		color: #333; /* Example */
-		box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4); /* Example */
+		background-color: white;
+		color: #333;
+		box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
 	}
 </style>

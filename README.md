@@ -1,38 +1,57 @@
-# sv
+# 🗺️ Kathmandu Shame Map (KSM)
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A civic tech project built to expose Kathmandu’s environmental neglect—**in real time, by real people**.
 
-## Creating a project
+This is not a feel-good map. It is a mirror held up to a broken system.
 
-If you're seeing this, you've probably already done this step. Congrats!
+---
+
+## ❓ What Is KSM?
+
+The **Kathmandu Shame Map** is a public, crowdsourced platform that lets citizens:
+
+- 📍 Report pollution incidents (trash, plastic fires, sewage leaks, air pollution)
+- 🗺️ Pin them directly on a live map of Kathmandu
+- 📷 Upload photos as evidence
+- 📊 Make environmental shame **visible, undeniable, and trackable**
+
+Think of it as the **Google Maps of civic failure**—only every marker is a call to action.
+
+---
+
+## 🚀 Tech Stack
+
+| Layer            | Tech                                 |
+| ---------------- | ------------------------------------ |
+| Frontend         | [SvelteKit](https://kit.svelte.dev)  |
+| Map Rendering    | [Leaflet.js](https://leafletjs.com)  |
+| Auth & Database  | [Supabase](https://supabase.com)     |
+| Storage (Images) | Supabase Storage                     |
+| Testing (E2E)    | [Playwright](https://playwright.dev) |
+| Deployment       | Cloudflare / Vercel (TBD)            |
+
+---
+
+## 🔐 Security & Integrity
+
+- ✅ **RLS (Row-Level Security)** enforced in Supabase to protect user-submitted data
+- ✅ Insert policies ensure users can only write their own data
+- ✅ Anonymous or email-based auth for minimal barrier to contribution
+
+---
+
+## 📦 Getting Started (Local Dev)
+
+> Requires: `pnpm`, `Node.js`, `Supabase CLI`, and Supabase project initialized
 
 ```bash
-# create a new project in the current directory
-npx sv create
+# Clone the repo
+git clone https://github.com/your-username/kathmandu-shame-map.git
+cd kathmandu-shame-map
 
-# create a new project in my-app
-npx sv create my-app
+# Install deps
+pnpm install
+
+# Start dev server
+pnpm dev
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
